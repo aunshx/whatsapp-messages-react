@@ -78,7 +78,12 @@ const SendMessages = () => {
         setMessageEmptyError(true)
         setTimeout(() => setMessageEmptyError(false), 3000)
     } else {
-        //TODO: Whatsapp message send code here
+        let number = mobileNumber.replace(/[^\w\s]/gi, "").replace(/ /g, "");
+
+        let url = `${URL}?phone=${number}`;
+
+       url += `&text=${encodeURI(message)}&app_absent=0`;
+      window.open(url)
     }
   }
 
