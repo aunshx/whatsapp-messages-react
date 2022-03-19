@@ -1,40 +1,26 @@
 {
-  "name": "send-whatsapp-messages",
-  "version": "0.1.0",
-  "private": true,
-  "author": "aunsh.com",
-  "dependencies": {
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.5.1",
-    "@mui/material": "^5.5.1",
-    "@mui/styles": "^5.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0"
+  "name": "Send messages from react app to whatsapp web",
+  "version": "1.0.0",
+  "description": "Send messages to react app",
+  "main": "server.js",
+  "engines": {
+    "npm": "^8.5.4",
+    "node": "^16.14.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server",
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "author": "Aunsh B",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-sanitizer": "^1.0.6",
+    "moment": "^2.29.1",
+    "path": "^0.12.7"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
