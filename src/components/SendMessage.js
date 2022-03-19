@@ -53,10 +53,9 @@ const SendMessages = () => {
 
     const [numberEmptyError, setNumberEmptyError] = useState(false);
     const [messageEmptyError, setMessageEmptyError] = useState(false);
-    const [notAnInteger, setNotAnInteger] = useState(false)
 
   const [formData, setFormData] = useState({
-    mobileNumber: "",
+    mobileNumber: '',
     message: "",
   });
 
@@ -75,10 +74,8 @@ const SendMessages = () => {
     if (mobileNumber.length < 1){
         setNumberEmptyError(true)
         setTimeout(() => setNumberEmptyError(false), 3000);
-    } else if (!isFinite(String(mobileNumber))){
-        setNotAnInteger(true)
-        setTimeout(() => setNotAnInteger(false), 3000)
-    } else if (message.length < 1) {
+    }
+    else if (message.length < 1) {
         setMessageEmptyError(true)
         setTimeout(() => setMessageEmptyError(false), 3000)
     } else {
@@ -103,18 +100,15 @@ const SendMessages = () => {
         {numberEmptyError && (
           <div className='errors'>Mobile number cannot be empty!</div>
         )}
-        {notAnInteger && (
-          <div className='errors'>Mobile number should be an integer!</div>
-        )}
         {messageEmptyError && (
           <div className='errors'>Message cannot be empty!</div>
         )}
-        {!numberEmptyError && !notAnInteger && !messageEmptyError && (
+        {!numberEmptyError && !messageEmptyError && (
           <div className='errors-null'>.</div>
         )}
         <div className='search_contact app'>
           <CssTextField
-            error={numberEmptyError || notAnInteger}
+            error={numberEmptyError}
             label='Mobile Number'
             placeholder='Mobile Number'
             name='mobileNumber'
@@ -138,7 +132,7 @@ const SendMessages = () => {
             multiline
             maxRows={4}
             label='Message'
-            placeholder='Hi! Payment reminder....'
+            placeholder='Hi! Sending a message from React....'
             size='small'
             InputLabelProps={{
               style: textFieldInputLabelStyle,
