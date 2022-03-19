@@ -34,13 +34,13 @@ const textFieldStyle = {
 
 const SendMessages = () => {
   const CHARACTER_LIMIT = 100;
+    const URL = "https://web.whatsapp.com/send";
 
-
-    const [numberEmptyError, setNumberEmptyError] = useState(false);
-    const [messageEmptyError, setMessageEmptyError] = useState(false);
+  const [numberEmptyError, setNumberEmptyError] = useState(false);
+  const [messageEmptyError, setMessageEmptyError] = useState(false);
 
   const [formData, setFormData] = useState({
-    mobileNumber: '',
+    mobileNumber: "",
     message: "",
   });
 
@@ -55,23 +55,22 @@ const SendMessages = () => {
   };
 
   const onSubmit = (e) => {
-    e.preventDefault()
-    if (mobileNumber.length < 1){
-        setNumberEmptyError(true)
-        setTimeout(() => setNumberEmptyError(false), 3000);
-    }
-    else if (message.length < 1) {
-        setMessageEmptyError(true)
-        setTimeout(() => setMessageEmptyError(false), 3000)
+    e.preventDefault();
+    if (mobileNumber.length < 1) {
+      setNumberEmptyError(true);
+      setTimeout(() => setNumberEmptyError(false), 3000);
+    } else if (message.length < 1) {
+      setMessageEmptyError(true);
+      setTimeout(() => setMessageEmptyError(false), 3000);
     } else {
-        let number = mobileNumber.replace(/[^\w\s]/gi, "").replace(/ /g, "");
+      let number = mobileNumber.replace(/[^\w\s]/gi, "").replace(/ /g, "");
 
-        let url = `${URL}?phone=${number}`;
+      let url = `${URL}?phone=${number}`;
 
-       url += `&text=${encodeURI(message)}&app_absent=0`;
-      window.open(url)
+      url += `&text=${encodeURI(message)}&app_absent=0`;
+      window.open(url);
     }
-  }
+  };
 
   return (
     <div className='communication'>
@@ -149,7 +148,12 @@ const SendMessages = () => {
           />
         </div>
         <div style={{ marginTop: "1.5em" }}>
-          <Button onClick={onSubmit} variant='outlined' color='success' size='small' >
+          <Button
+            onClick={onSubmit}
+            variant='outlined'
+            color='success'
+            size='small'
+          >
             Send
           </Button>
         </div>
