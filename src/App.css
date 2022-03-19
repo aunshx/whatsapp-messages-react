@@ -1,8 +1,6 @@
 /* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@600&family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
    --background-color: rgb(241, 246, 247);
@@ -22,6 +20,7 @@
 
 body {
   background-color: var(--background-color) !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ------------------------------- BASICS ------------------------ */
@@ -77,4 +76,27 @@ body {
   margin-top: 0.5em;
   color: var(--grey-color);
   cursor: pointer;
+}
+
+/* --------------------------------- ERRORS ---------------------------------- */
+.errors {
+  font-size: 0.75em;
+  background-color: var(--closing-color);
+  color: var(--light-color);
+  width: 90%;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 0.8em;
+}
+
+.errors-null {
+  font-size: 0.75em;
+  background-color: none;
+  color: var(--light-color);
+  width: 90%;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 0.8em;
 }
