@@ -34,7 +34,7 @@ const textFieldStyle = {
 
 const SendMessages = () => {
   const CHARACTER_LIMIT = 100;
-    const URL = "https://web.whatsapp.com/send";
+    // const URL = "https://web.whatsapp.com/send";
 
   const [numberEmptyError, setNumberEmptyError] = useState(false);
   const [messageEmptyError, setMessageEmptyError] = useState(false);
@@ -63,12 +63,12 @@ const SendMessages = () => {
       setMessageEmptyError(true);
       setTimeout(() => setMessageEmptyError(false), 3000);
     } else {
-      let number = mobileNumber.replace(/[^\w\s]/gi, "").replace(/ /g, "");
+    //   let number = mobileNumber.replace(/[^\w\s]/gi, "").replace(/ /g, "");
 
-      let url = `${URL}?phone=${number}`;
+    //   let url = `${URL}?phone=${number}`;
 
-      url += `&text=${encodeURI(message)}&app_absent=0`;
-      window.open(url);
+    //   url += `&text=${encodeURI(message)}&app_absent=0`;
+    //   window.open(url);
     }
   };
 
