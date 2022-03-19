@@ -4,20 +4,6 @@ import PropTypes from "prop-types";
 import { Button, TextField, styled } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-import { makeStyles } from "@mui/styles";
-
-const loginIconButtonStyle = makeStyles({
-  root: {
-    color: "#332981",
-    backgroundColor: "none",
-    fontSize: "10px",
-    "&:hover": {
-      backgroundColor: "transparent",
-      color: "#968F73",
-      border: "1px solid #968F73",
-    }
-  },
-});
 
 const CssTextField = styled(TextField, {
   shouldForwardProp: (props) => props !== "focusColor",
