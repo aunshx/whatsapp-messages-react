@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server --ignore client",
-    "client": "npm start --prefix client"
+    "client": "npm start --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Aunsh B",
   "license": "ISC",
