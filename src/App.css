@@ -9,6 +9,7 @@
     --closing-color: rgb(245, 41, 41);
     --grey-color: grey;
     --check-color: rgb(42, 199, 42);
+    --aunsh-website-color: rgb(0, 145, 255);
 }
 
 /* --------------------------------- GLOBAL STYLES ------------------- */
@@ -99,4 +100,51 @@ body {
   border-radius: 10px;
   text-align: center;
   margin-top: 0.8em;
+}
+
+/* ------------------------------------- FOOTER --------------------------------- */
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Comfortaa', cursive;
+}
+
+.footer .text,
+.footer--admin .text {
+  font-size: 0.8em;
+  color: rgb(167, 167, 167);
+  font-weight: bold;
+}
+
+.footer .text a,
+.footer--admin .text a {
+  font-size: 0.9em;
+  color: rgb(167, 167, 167);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer .text a:hover,
+.footer--admin .text a:hover {
+  color: var(--aunsh-website-color);
+  font-weight: bold;
+}
+
+/* --------------------------------- CREATOR LINK ---------------------------------- */
+.creator-link a {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 2.2em;
+  color: var(--grey-color);
+  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.creator-link a:hover {
+  color: var(--aunsh-website-color);
 }
