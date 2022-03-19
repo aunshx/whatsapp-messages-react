@@ -6,9 +6,11 @@
 
 :root {
    --background-color: rgb(241, 246, 247);
-    --navbar-color: rgb(255, 255, 255);
+    --light-color: rgb(255, 255, 255);
     --light-dark-font-color: rgb(51, 50, 50);
     --closing-color: rgb(245, 41, 41);
+    --grey-color: grey;
+    --check-color: rgb(42, 199, 42);
 }
 
 /* --------------------------------- GLOBAL STYLES ------------------- */
@@ -45,4 +47,34 @@ body {
     display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* --------------------------------- COMMUNICATION ---------------------- */
+.communication .whatsapp-card {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  width: 300px;
+  min-height: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0.5em;
+}
+
+.communication .whatsapp-card .title {
+  color: var(--check-color);
+  font-size: 1.4em;
+  margin-top: 0.5em;
+}
+
+.communication .whatsapp-card .search_contact_whatsapp {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  column-gap: 1em;
+  margin: 1em 0;
+}
+
+.communication .whatsapp-card .search_contact_whatsapp .add_new_client {
+  margin-top: 0.5em;
+  color: var(--grey-color);
+  cursor: pointer;
 }

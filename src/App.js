@@ -1,8 +1,10 @@
-import './App.css';
+import SendMessages from "./components/SendMessage";
+import "./App.css";
 
 function App() {
   return (
-    <div className="app">
+    <div style={{ width: "100vw", height: "100vh" }} className='flex_middle'>
+        <SendMessages />
     </div>
   );
 }
